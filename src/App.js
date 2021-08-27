@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SocialMediaButtons from "./SocialMediaButtons";
+const styles = {
+  fontFamily: "sans-serif",
+  textAlign: "center",
+};
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div style={styles}>
+    <h2>Click a button below to test react-share@1.16.0 {"\u2728"}</h2>
+
+    <SocialMediaButtons
+      url="https://demo1-app-bucket.s3.ap-south-1.amazonaws.com/invoice.pdf"
+      text="Check out this Report"
+    />
+  </div>
+);
 
 export default App;
